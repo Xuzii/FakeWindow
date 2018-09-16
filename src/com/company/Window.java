@@ -3,7 +3,7 @@ package com.company;
 import java.awt.*;
 import java.util.Random;
 
-public class Window implements Comparable{
+public class Window {
     private int xPos;
     private int yPos;
     private int xSize;
@@ -39,9 +39,4 @@ public class Window implements Comparable{
         return color;
     }
 
-
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

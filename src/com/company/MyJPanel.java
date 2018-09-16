@@ -21,14 +21,14 @@ public class MyJPanel extends JPanel implements MouseListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        windowManager.bringToFront(e.getX(),e.getY());
+        System.out.println(e.getX() + " | " + e.getY());
+        paintComponent(this.getGraphics());
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        windowManager.bringToFront(e.getX(),e.getY());
-        System.out.println(e.getX() + " | " + e.getY());
-        paintComponent(this.getGraphics());
+
 
     }
 

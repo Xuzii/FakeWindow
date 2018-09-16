@@ -2,6 +2,7 @@ package com.company;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class WindowManager {
     private ArrayList<Window> storeWindows = new ArrayList<>();
@@ -13,9 +14,9 @@ public class WindowManager {
         }
     }
     public void display(Graphics g){
-        for(Window window : storeWindows){
-            g.setColor(window.getColor());
-            g.fillRect(window.getxPos(),window.getyPos(),window.getxSize(),window.getySize());
+        for (int i = WINDOW_COUNT - 1; i >= 0 ; i--) {
+            g.setColor(storeWindows.get(i).getColor());
+            g.fillRect(storeWindows.get(i).getxPos(),storeWindows.get(i).getyPos(),storeWindows.get(i).getxSize(),storeWindows.get(i).getySize());
         }
     }
     public void bringToFront(int xClick, int yClick){
